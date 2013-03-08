@@ -1,0 +1,11 @@
+package com.progress.demo.rce;
+using com.progress.demo.rce.streams.Stream;
+
+monitor mInput {
+	Stream stev;
+	action onload() {
+		on all Stream():stev {
+			print stev.toString();
+		}
+	}
+}
